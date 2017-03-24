@@ -1,0 +1,381 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+}
+
+/*---------- finished resetting --------*/
+body{
+	/*font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	line-height:  1.5;*/
+	font: 15px/1.5 Arial, Helvetica, sans-serif;
+	background-color: #f4f4f4;
+}
+
+/*global*/
+.container{
+	width: 80%;
+	margin: auto;
+	overflow: hidden;
+}
+
+.button_1{
+	height:38px;
+	background: #e8491d;
+	border: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	color: #ffffff;
+}
+.dark{
+	padding: 15px;
+	background-color: #35424a;
+	color: #ffffff;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+/*header*/
+header{
+	background: #35424a;
+	color: #ffffff;
+	padding-top: 20px;
+	/*min-height will make sure the height will adjust itself*/
+	min-height: 50px;
+	border-bottom: #e8491d 3px solid;
+}
+
+header img{
+	width: 200px;
+}
+
+header a {
+	color: #ffffff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+}
+
+header li{
+	/*float: left;*/
+	display: inline;
+	padding: 0 20px 0 20px;
+}
+
+header #branding{
+	float:left;
+}
+
+header nav{
+	float:right;
+	margin-top: 15px;
+}
+
+header .highlight,
+header .current a{
+	color: #e8491d;
+	font-weight: bold;
+
+}
+
+header a:hover{
+	color:#cccccc;
+	font-weight: bold;
+}
+
+/*---showcase---*/
+#showcase{
+	min-height: 400px;
+	/*background: url('../images/background.png') no-repeat 0 -200px;*/
+	/*credit to: https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTKWeX9C4fSARXXlRX7NIJY75JZcuBBMv9kJMi9qFjF-snNtktO*/
+	text-align: center;
+	color: #ffffff;	
+	padding-bottom: 20px;
+}
+#showcase h1{
+	margin-top: 100px;
+	font-size: 55px;
+	margin-bottom: 10px;
+}
+#showcase p{
+	font-size: 20px;
+}
+
+/* newsletter */
+#newsletter{
+	min-height: 40px;
+	padding: 15px;
+	color:#ffffff;
+	background: #35424a; 
+}
+
+#newsletter h1{
+	float: left;
+	margin-top: 5px;
+}
+
+#newsletter form{
+	float: right;
+}
+#newsletter input[type="email"]{
+	padding: 4px;
+	height:25px;
+	width: 250px;
+}
+
+/*----boxes----*/
+
+#boxes{
+	margin-top: 20px;
+}
+#boxes .box{
+	/*display: inline;*/
+	float:left;
+	width: 30%;
+	padding: 10px;
+	text-align: center;
+}
+#boxes .box img{
+	height: 120px;
+}
+
+
+/*----services-----*/
+ul#services li{
+	list-style: none;
+	padding: 20px 20px 10px 20px;
+	border: #cccccc solid 1px;
+	margin-bottom: 10px;
+	background-color: #e6e6e6;
+}
+
+/*   footer    */
+footer{
+	padding: 20px;
+	margin-top: 20px;
+	min-height: 30px;
+	background-color: #e8491d;
+	color:#ffffff;
+	text-align: center;
+}
+
+/*--------------for about.html-------*/
+
+/*aside*/
+aside#sidebar{
+	float: right;
+	width: 30%;
+	margin-top: 10px;
+}
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+	width: 90%;
+	padding: 5px; 
+}
+
+article#main_col{
+	float: left;
+	width: 65%;
+}
+article#main_col h1, aside#sidebar h3{
+	margin: 10px 0;
+}
+article#main_col p{
+	margin-bottom: 15px;
+}
+
+
+/*--media queries--*/
+@media(max-width: 768px){
+	/*body{
+		display: none;
+	}*/
+	header #branding,
+	header nav,
+	header nav li,
+	#newsletter h1,
+	#newsletter form,
+	#boxes .box,
+	article#main_col,
+	aside#sidebar
+		{
+			float: none;
+			text-align: center;
+			width: 100%;
+		}
+	header{
+		padding-bottom: 20px;
+	}
+
+	#showcase h1{
+		margin-top: 40px;
+	}
+	#newsletter button, .quote button{
+		display: block;
+		width: 100%;
+		margin-top: 5px;
+	}
+	#newsletter form input[type='email'], .quote input, .quote textarea{
+		display: block;
+		width: 100%;
+		margin-bottom: 5px;
+	}
+}
+
+
+/*new*/
+.mySlides {
+    display: none;
+
+}
+.prev, .next {
+  	cursor: pointer;
+  	position: absolute;
+  	top: 50%;
+  	width: auto;
+  	margin-top: -22px;
+  	padding: 16px;
+  	color: white;
+  	font-weight: bold;
+  	font-size: 18px;
+  	transition: 0.6s ease;
+  	border-radius: 0 3px 3px 0;
+}
+.next {
+  	right: 0;
+  	border-radius: 3px 0 0 3px;
+}
+.prev{
+	left:0;
+	border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.mySlides img{	
+	width: 100%;
+	max-height: 550px;
+}
+
+/*wireframe*/
+#wireframe{
+	height: auto;
+	margin-top: 50px;
+}
+#wireframe .contentContainer{
+	min-height: 200px;	
+}
+
+#wireframe #title{
+	text-align: center;
+	/*position: absolute;*/
+	/*margin: 0 auto;*/
+}
+#title h1{
+	margin:0 auto;
+}
+.contentContainer{
+	position: relative;
+	margin: 50px 0;
+}
+
+.leftImg{
+	width: 40%;
+	height: auto;
+	margin-left: 100px;
+}
+.wfIntroRight{
+	/*float: right;*/
+	position: absolute;
+	width: 30%;
+	/*margin-right: 10%;*/
+	top: 50%;
+	transform: translateY(-50%);
+	left:55%;
+}
+.rightImg{
+	width: 40%;
+	height: auto;
+	margin-left: 50%;
+}
+.wfIntroLeft{
+	position: absolute;
+	width: 30%;
+	top:50%;
+	transform: translateY(-50%);
+	right:55%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
