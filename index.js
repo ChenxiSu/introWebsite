@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', express.static('public'));
 
 
-app.set('port', (process.env.PORT || 3000));
+app.set('port', (process.env.PORT || 80));
 app.listen(app.get('port'), function(){
     console.log("Server started on port "+ app.get('port'));
     console.log(new Date());
