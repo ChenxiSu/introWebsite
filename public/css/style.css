@@ -69,6 +69,7 @@ header a {
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 16px;
+
 }
 
 header li{
@@ -251,7 +252,7 @@ article#main_col p{
   	padding: 16px;
   	color: white;
   	font-weight: bold;
-  	font-size: 18px;
+  	font-size: 24px;
   	transition: 0.6s ease;
   	border-radius: 0 3px 3px 0;
 }
@@ -269,13 +270,64 @@ article#main_col p{
 }
 /* Caption text */
 .text {
-  color: #f2f2f2;
+  /*color: #f2f2f2;*/
   font-size: 15px;
   padding: 8px 12px;
   position: absolute;
   bottom: 8px;
-  width: 100%;
-  text-align: center;
+  position: absolute;   
+}
+
+.caption1{
+  text-align: left;
+  top: 65%; 
+  left: 10%;
+  color: #ffffff;
+}
+
+.caption2{
+  text-align: left;
+  top: 36%; 
+  right: 10%;
+  color: #69442D;
+  font-weight: 900;
+}
+
+.caption3{
+  text-align: left;
+  top: 48%; 
+  left: 38%;
+  color: #F5D328;
+}
+
+/*.caption4{
+  text-align: left;
+  top: 48%; 
+  left: 38%;
+  color: #F5D328;
+}*/
+
+.caption5{
+  text-align: left;
+  top: 66%; 
+  left: 62%;
+  color: #F5D328;
+}
+
+
+h2 span { 
+   color: white; 
+   font: bold 32px/40px Helvetica, Sans-Serif; 
+   letter-spacing: -1px;  
+   background: rgb(0, 0, 0);  /*fallback color */
+   background: rgba(0, 0, 0, 0.9);
+   padding: 10px; 
+   line-height: 1.5em;
+}
+
+h2 span.spacer {
+   padding:0 5px;
+
 }
 
 .active, .dot:hover {
@@ -305,8 +357,30 @@ article#main_col p{
 .mySlides img{	
 	width: 100%;
 	max-height: 550px;
+	position: relative;
+	width: 100%;
 }
 
+
+/*Who we serve*/
+#whoWeServe{
+	min-height: 200px;
+
+}
+#superIndiv{	
+	float: right;
+	width: 45%;
+	text-align: center;
+}
+#microEntrp{
+	position: absolute;
+	width: 45%;
+	text-align: center;
+}
+
+#superIndiv p, #microEntrp p{
+	padding: 0 20px;
+}
 /*wireframe*/
 #wireframe{
 	height: auto;
@@ -316,13 +390,14 @@ article#main_col p{
 	min-height: 200px;	
 }
 
-#wireframe #title{
+.title{
 	text-align: center;
-	/*position: absolute;*/
-	/*margin: 0 auto;*/
+	padding-top: 40px;
+	margin-bottom: 40px;
 }
-#title h1{
+.title h1{
 	margin:0 auto;
+
 }
 .contentContainer{
 	position: relative;
