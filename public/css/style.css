@@ -147,8 +147,8 @@ header a:hover{
 #boxes .box{
 	/*display: inline;*/
 	float:left;
-	width: 30%;
-	padding: 10px;
+	width: 33.33%;
+	padding: 0px;
 	text-align: center;
 }
 #boxes .box img{
@@ -363,24 +363,40 @@ h2 span.spacer {
 
 
 /*Who we serve*/
+.column {
+	width: 33.33%;
+	float: left;
+	text-align: center;
+}
+
+.content{
+	width: 80%;
+	text-align: center;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
 #whoWeServe{
 	min-height: 200px;
 
 }
-#superIndiv{	
+/*#superIndiv{	
 	float: right;
 	width: 45%;
-	text-align: center;
+	
 }
 #microEntrp{
 	position: absolute;
 	width: 45%;
 	text-align: center;
+}*/
+
+#freelancers p, #startups p, #professionals p{
+	padding: 0 30px;
+	/*text-align: left;*/
 }
 
-#superIndiv p, #microEntrp p{
-	padding: 0 20px;
-}
+
 /*wireframe*/
 #wireframe{
 	height: auto;
@@ -402,6 +418,10 @@ h2 span.spacer {
 .contentContainer{
 	position: relative;
 	margin: 50px 0;
+}
+
+.stepsContent{
+	font-weight: lighter;
 }
 
 .leftImg{
