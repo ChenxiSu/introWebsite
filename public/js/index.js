@@ -16,8 +16,9 @@ function imgShow(n){
 		imgIndex = 0;
 	}
 	if(n < 0){
-		imgIndex = images.length;
+		imgIndex = images.length-1;
 	}
+
 	for(var i = 0; i < images.length; i++){
 		images[i].style.display = "none";
 	}
@@ -28,3 +29,13 @@ function imgShow(n){
 	images[imgIndex].style.display = "block"; 
   	dots[imgIndex].className += " active";
 }
+
+$(document).ready(function(){
+
+	$(".videoPoster").click(function(){
+		//console.log($(this).data("url"));
+		var curSrc = $(this).data("url");
+		$("iframe").attr("src", curSrc);
+	})
+
+});
